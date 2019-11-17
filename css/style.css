@@ -1,0 +1,40 @@
+div#redbutton{
+
+   	float: left;
+	width: 160px;
+	background: red;
+	height: 745px;
+	border-radius: 100px;
+}
+
+div#bluebutton{
+
+    
+	float: left;
+	width: 160px;
+	background: blue;
+	height: 745px;
+	margin-left: 20px;
+	border-radius: 100px;
+
+
+}
+
+div#greenbutton{
+	width: 160px;
+	background: green;
+	height: 745px;
+	float: left;
+	margin-left: 820px;
+	border-radius: 100px;
+}
+
+div#yellowbutton{
+	width: 160px;
+	background: yellow;
+	height: 745px;
+	float: left;
+	margin-left: 20px;
+	border-radius: 100px;
+}
+
