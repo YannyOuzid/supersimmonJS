@@ -101,6 +101,13 @@ button#start{
 }
 
 /* Modal des règles */
+
+img#Regles{
+
+	height: 50px;
+	margin-left: 100px;
+}
+
 .modal {
   display: none; 
   position: fixed; 
