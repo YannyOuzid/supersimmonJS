@@ -25,7 +25,7 @@ div#greenbutton{
 	background: green;
 	height: 745px;
 	float: left;
-	margin-left: 820px;
+	margin-left: 310px;
 	border-radius: 100px;
 }
 
@@ -37,4 +37,14 @@ div#yellowbutton{
 	margin-left: 20px;
 	border-radius: 100px;
 }
+
+div#Stats{
+	width: 160px;
+	background: pink;
+	height: 745px;
+	float: left;
+	border-radius: 100px;
+	margin-left: 350px;
+}
+
 
