@@ -5,6 +5,16 @@ div#redbutton{
 	background: red;
 	height: 745px;
 	border-radius: 100px;
+	transition-property:background-color; 
+	transition-duration: 0.25s;
+}
+
+div#redbutton:hover{
+	background-color: #B30001
+}
+
+div#redbutton:active{
+	background-color: #FF6C6C;
 }
 
 div#bluebutton{
@@ -16,8 +26,16 @@ div#bluebutton{
 	height: 745px;
 	margin-left: 20px;
 	border-radius: 100px;
+	transition-property:background-color; 
+	transition-duration: 0.25s;
+}
 
+div#bluebutton:hover{
+	background-color: #000DAD
+}
 
+div#bluebutton:active{
+	background-color: #6C8FFF;
 }
 
 div#greenbutton{
@@ -27,6 +45,16 @@ div#greenbutton{
 	float: left;
 	margin-left: 310px;
 	border-radius: 100px;
+	transition-property:background-color; 
+	transition-duration: 0.25s;
+}
+
+div#greenbutton:hover{
+	background-color: #104D00
+}
+
+div#greenbutton:active{
+	background-color: #95FF6C;
 }
 
 div#yellowbutton{
@@ -36,6 +64,16 @@ div#yellowbutton{
 	float: left;
 	margin-left: 20px;
 	border-radius: 100px;
+	transition-property:background-color; 
+	transition-duration: 0.25s;
+}
+
+div#yellowbutton:hover{
+	background-color: #C4C301
+}
+
+div#yellowbutton:active{
+	background-color: #F4FF6C;
 }
 
 div#Stats{
