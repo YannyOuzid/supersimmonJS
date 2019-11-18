@@ -5,16 +5,22 @@
 	<title>Devoir SuperSimon</title>
 </head>
 <body>
+	<audio id="audiodo" src="sound/do.wav" autoplay="false"></audio>
+	<audio id="audiore" src="sound/re.wav" autoplay="false"></audio>
+	<audio id="audiomi" src="sound/mi.wav" autoplay="false"></audio>
+	<audio id="audiofa" src="sound/fa.wav" autoplay="false"></audio>
+	
 
-	<div id="redbutton" onmousedown="do.play()"></div>
-	<div id="bluebutton"></div>
+	<div id="redbutton" onclick="audioDo();"></div>
+	<div id="bluebutton" onclick="audioRe();"></div>
 
 	<div id="Stats">
 	<button id="start">Start</button>
+	<button id="recommencer">Recommencer</button>
 	</div>
 
-	<div id="greenbutton"></div>
-	<div id="yellowbutton"></div>
+	<div id="greenbutton" onclick="audioMi();"></div>
+	<div id="yellowbutton" onclick="audioFa();"></div>
 
 
 	<!-- Trigger/Open The Modal -->
