@@ -79,7 +79,6 @@ div#yellowbutton:active{
 
 div#Stats{
 	width: 160px;
-	background: pink;
 	height: 745px;
 	float: left;
 	border-radius: 100px;
@@ -88,7 +87,8 @@ div#Stats{
 
 button#start{
 	margin-top: 300px;
-    margin-left: 30px;
+	margin-left: 30px;
+	border-radius: 60px;
   	background-color: brown; 
   	border: none;
   	color: white;
@@ -97,6 +97,12 @@ button#start{
   	text-decoration: none;
   	display: inline-block;
   	font-size: 16px;
+
+}
+
+button#recommencer{
+	margin-top: 300px;
+    margin-left: 30px;
 
 }
 
