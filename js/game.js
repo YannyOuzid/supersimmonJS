@@ -56,13 +56,13 @@ function gameTurn() {
 
             clearInterval(intervalId);
             compTurn = false;
-            clearColor();
+            Couleurnormal();
             on = true;
         }
 
         if (compTurn){
 
-            clearColor();
+            Couleurnormal();
             setTimeout(() => {
                 if (order[flash] == 1) premierbouton();
                 if (order[flash] == 2) deuxiemebouton();
@@ -140,7 +140,7 @@ function sixiemebouton() {
 }
 /* Fonction des couleurs des boutons*/
 
-function clearColor() {
+function Couleurnormal() {
 
     redbutton.style.backgroundColor = "red";
     bluebutton.style.backgroundColor = "blue";
@@ -151,7 +151,7 @@ function clearColor() {
 
 }
 
-function flashColor() {
+function CouleurSurbrillance() {
 
     redbutton.style.backgroundColor = "#FF6C6C";
     bluebutton.style.backgroundColor = "#6C8FFF";
@@ -171,7 +171,7 @@ redbutton.addEventListener('click', (event) => {
     }
     if(!win){
         setTimeout(() => {
-            clearColor();
+            Couleurnormal();
             check();
             nbrclicks ++;
             click.innerHTML = nbrclicks;
@@ -185,7 +185,7 @@ pinkbutton.addEventListener('click', (event) => {
     }
     if(!win){
         setTimeout(() => {
-            clearColor();
+            Couleurnormal();
             check();
             nbrclicks ++;
             click.innerHTML = nbrclicks;
@@ -199,7 +199,7 @@ bluebutton.addEventListener('click', (event) => {
     }
     if(!win){
         setTimeout(() => {
-            clearColor();
+            Couleurnormal();
             check();
             nbrclicks ++;
             click.innerHTML = nbrclicks;
@@ -213,7 +213,7 @@ greenbutton.addEventListener('click', (event) => {
     }
     if(!win){
         setTimeout(() => {
-            clearColor();
+            Couleurnormal();
             check();
             nbrclicks ++;
             click.innerHTML = nbrclicks;
@@ -227,7 +227,7 @@ brownbutton.addEventListener('click', (event) => {
     }
     if(!win){
         setTimeout(() => {
-            clearColor();
+            Couleurnormal();
             check();
             nbrclicks ++;
             click.innerHTML = nbrclicks;
@@ -241,7 +241,7 @@ yellowbutton.addEventListener('click', (event) => {
     }
     if(!win){
         setTimeout(() => {
-            clearColor();
+            Couleurnormal();
             check();
             nbrclicks ++;
             click.innerHTML = nbrclicks;
@@ -260,9 +260,9 @@ function check(){
         }
     
     if(good == false){
-        flashColor();
+        CouleurSurbrillance();
         setTimeout(() => {
-                clearColor();
+                Couleurnormal();
                 flash=0;
                 compTurn = true;
                 playorder = [];
@@ -288,6 +288,6 @@ function check(){
 
 function winGame(){
 
-    flashColor();
+    CouleurSurbrillance();
     
 }
