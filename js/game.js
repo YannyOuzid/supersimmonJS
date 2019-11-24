@@ -62,12 +62,12 @@ function gameTurn() {
 
             clearColor();
             setTimeout(() => {
-                if (order[flash] == 1) one();
-                if (order[flash] == 2) two();
-                if (order[flash] == 3) three();
-                if (order[flash] == 4) four();
-                if (order[flash] == 5) five();
-                if (order[flash] == 6) six();
+                if (order[flash] == 1) premierbouton();
+                if (order[flash] == 2) deuxiemebouton();
+                if (order[flash] == 3) troisiemebouton();
+                if (order[flash] == 4) quatriemebouton();
+                if (order[flash] == 5) cinquiemebouton();
+                if (order[flash] == 6) sixiemebouton();
                 flash++;
 
             }, 200);
@@ -75,7 +75,7 @@ function gameTurn() {
 }
 
 
-function one() {
+function premierbouton() {
     if (noise) {
         let audio = document.getElementById("audiodo");
         audio.play();
@@ -85,7 +85,7 @@ function one() {
     redbutton.style.backgroundColor = "#FF6C6C";
 
 }
-function two() {
+function deuxiemebouton() {
     if (noise) {
         let audio = document.getElementById("audiore");
         audio.play();
@@ -95,7 +95,7 @@ function two() {
     pinkbutton.style.backgroundColor = "#F9BEFA";
 
 }
-function three() {
+function troisiemebouton() {
     if (noise) {
         let audio = document.getElementById("audiomi");
         audio.play();
@@ -105,7 +105,7 @@ function three() {
     bluebutton.style.backgroundColor = "#6C8FFF";
 
 }
-function four() {
+function quatriemebouton() {
     if (noise) {
         let audio = document.getElementById("audiofa");
         audio.play();
@@ -115,7 +115,7 @@ function four() {
     greenbutton.style.backgroundColor = "#95FF6C";
 
 }
-function five() {
+function cinquiemebouton() {
     if (noise) {
         let audio = document.getElementById("audiosol");
         audio.play();
@@ -125,7 +125,7 @@ function five() {
     brownbutton.style.backgroundColor = "#F96969";
 
 }
-function six() {
+function sixiemebouton() {
     if (noise) {
         let audio = document.getElementById("audiola");
         audio.play();
@@ -161,7 +161,7 @@ function flashColor() {
 redbutton.addEventListener('click', (event) => {
     if (on) {
         playorder.push(1);
-        one();
+        premierbouton();
     }
     if(!win){
         setTimeout(() => {
@@ -175,7 +175,7 @@ redbutton.addEventListener('click', (event) => {
 pinkbutton.addEventListener('click', (event) => {
     if (on) {
         playorder.push(2);
-        two();
+        deuxiemebouton();
     }
     if(!win){
         setTimeout(() => {
@@ -189,7 +189,7 @@ pinkbutton.addEventListener('click', (event) => {
 bluebutton.addEventListener('click', (event) => {
     if (on) {
         playorder.push(3);
-        three();
+        troisiemebouton();
     }
     if(!win){
         setTimeout(() => {
@@ -203,7 +203,7 @@ bluebutton.addEventListener('click', (event) => {
 greenbutton.addEventListener('click', (event) => {
     if (on) {
         playorder.push(4);
-        four();
+        quatriemebouton();
     }
     if(!win){
         setTimeout(() => {
@@ -217,7 +217,7 @@ greenbutton.addEventListener('click', (event) => {
 brownbutton.addEventListener('click', (event) => {
     if (on) {
         playorder.push(5);
-        five();
+        cinquiemebouton();
     }
     if(!win){
         setTimeout(() => {
@@ -231,7 +231,7 @@ brownbutton.addEventListener('click', (event) => {
 yellowbutton.addEventListener('click', (event) => {
     if (on) {
         playorder.push(6);
-        six();
+        sixiemebouton();
     }
     if(!win){
         setTimeout(() => {
