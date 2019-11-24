@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+omm<!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Devoir SuperSimon</title>
 </head>
 <body>
+
+		/* Son des touches avant le lancement du jeu*/
 
 	<audio id="audiodo" src="sound/do.wav" autoplay="false"></audio>
 	<audio id="audiore" src="sound/re.wav" autoplay="false"></audio>
@@ -14,28 +16,34 @@
 	<audio id="audiola" src="sound/la.wav" autoplay="false"></audio>
 	
 
+	/* Les trois premiers boutons*/
+
 	<div id="redbutton" onclick="audioDo();"></div>
 	<div id="pinkbutton" onclick="audioRe();"></div>
 	<div id="bluebutton" onclick="audioMi();"></div>
 
+	 <!-- Bouton start, recommencer et les statistiques de la parti -->
 
 	<div id="Stats">
-	<button id="start">Start</button>
-	<br>
-	<label for="nom">Round: </label>
-	<div id="round" value=""></div>
-	<br>
-	<label for="nom">Nombre de touches validé : </label>
-	<div id="click" value=""></div>
-	<button id="recommencer"  onclick="location.reload();">Recommencer</button>
+		<h2>Super Simmon</h2>
+		<button id="start">Start</button>
+		<br>
+		<label for="nom">Round: </label>
+		<div id="round" value=""></div>
+		<br>
+		<label for="nom">Nombre de touches validé : </label>
+		<div id="click" value=""></div>
+		<button id="recommencer"  onclick="location.reload();">Recommencer</button>
 	</div>
 
+	<!--Les trois derniers boutons-->
 
 	<div id="greenbutton" onclick="audioFa();"></div>
 	<div id="brownbutton" onclick="audioSol();"></div>
 	<div id="yellowbutton" onclick="audioLa();"></div>
 
 
+	<!--Modal des règles du jeu -->
 
 	<img id="Regles" src="img/regles.png">
 	<div id="Modalregles" class="modal">
@@ -47,6 +55,7 @@
   		</div>
 	</div>
 
+	<!-- Modal de GameOver -->
 
 	<div id="modalgameover" class="modal">
 		<div class="modal-content">

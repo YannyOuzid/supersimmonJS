@@ -2,6 +2,7 @@ body{
 	background-color: #888;
 }
 
+/* Style des boutons*/
 
 div#redbutton{
 
@@ -134,7 +135,7 @@ div#Stats{
 }
 
 button#start{
-	margin-top: 300px;
+	margin-top: 250px;
 	margin-left: 30px;
 	border-radius: 60px;
   	background-color: brown; 
@@ -149,7 +150,7 @@ button#start{
 }
 
 button#recommencer{
-	margin-top: 200px;
+	margin-top: 150px;
 	margin-left: 10px;
 	width:150px;
 	height:50px;
@@ -161,7 +162,7 @@ button#recommencer{
 
 }
 
-/* Modal des règles */
+/* Styles de modals */
 
 img#Regles{
 

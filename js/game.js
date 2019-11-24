@@ -21,6 +21,8 @@ const start = document.querySelector("#start");
 
 var modalgameover = document.getElementById("modalgameover");
 
+/* Création de la fonction du Start ainsi que des tour des boutons*/
+
 start.addEventListener('click', (event) => {
     play();
 }
@@ -74,6 +76,7 @@ function gameTurn() {
         }
 }
 
+/* Fonctionnement du son des boutons*/
 
 function premierbouton() {
     if (noise) {
@@ -135,6 +138,7 @@ function sixiemebouton() {
     yellowbutton.style.backgroundColor = "#F4FF6C";
 
 }
+/* Fonction des couleurs des boutons*/
 
 function clearColor() {
 
@@ -157,6 +161,8 @@ function flashColor() {
     brownbutton.style.backgroundColor = "#F96969";
 
 }
+
+/* Event sur la validation des boutons et l'ajout du score*/
 
 redbutton.addEventListener('click', (event) => {
     if (on) {
@@ -242,6 +248,8 @@ yellowbutton.addEventListener('click', (event) => {
         }, 300);
     }
 })
+
+/* Fonction sur les vérifications de victoires et ajout des rounds*/
 
 function check(){
     if (playorder[playorder.length - 1] !== order[playorder.length - 1])
