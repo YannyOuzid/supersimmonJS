@@ -1,5 +1,5 @@
 let order = [];
-let playerOrder = [];
+let playorder = [];
 let flash;
 let turn;
 let good;
@@ -8,7 +8,7 @@ let intervalId;
 let noise = true;
 let win;
 
-const turnCounter = document.querySelector("#tour");
+const round = document.querySelector("#round");
 const redbutton = document.querySelector("#redbutton");
 const bluebutton = document.querySelector("#bluebutton");
 const greenbutton = document.querySelector("#greenbutton");
@@ -16,9 +16,7 @@ const yellowbutton = document.querySelector("#yellowbutton");
 const start = document.querySelector("#start");
 
 start.addEventListener('click', (event) => {
-
     play();
-
 }
 );
 
@@ -26,12 +24,13 @@ function play(){
 
     win = false;
     order = [];
-    playerOrder = [];
+    playorder = [];
     flash = 0;
     intervalId = 0;
     turn = 1;
     good = true;
-    for (var i = 0; i <20; i++){
+    round.innerHTML = 1;
+    for (var i = 0; i <9999; i++){
 
         order.push(Math.floor(Math.random() * 4) + 1);
     }
@@ -64,6 +63,8 @@ function gameTurn() {
             }, 200);
         }
 }
+
+
 function one() {
     if (noise) {
         let audio = document.getElementById("audiodo");
@@ -125,7 +126,7 @@ function flashColor() {
 
 redbutton.addEventListener('click', (event) => {
     if (on) {
-        playerOrder.push(1);
+        playorder.push(1);
         one();
     }
     if(!win){
@@ -137,7 +138,7 @@ redbutton.addEventListener('click', (event) => {
 })
 bluebutton.addEventListener('click', (event) => {
     if (on) {
-        playerOrder.push(2);
+        playorder.push(2);
         two();
     }
     if(!win){
@@ -149,7 +150,7 @@ bluebutton.addEventListener('click', (event) => {
 })
 greenbutton.addEventListener('click', (event) => {
     if (on) {
-        playerOrder.push(3);
+        playorder.push(3);
         three();
     }
     if(!win){
@@ -161,7 +162,7 @@ greenbutton.addEventListener('click', (event) => {
 })
 yellowbutton.addEventListener('click', (event) => {
     if (on) {
-        playerOrder.push(4);
+        playorder.push(4);
         four();
     }
     if(!win){
@@ -173,10 +174,10 @@ yellowbutton.addEventListener('click', (event) => {
 })
 
 function check(){
-    if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
+    if (playorder[playorder.length - 1] !== order[playorder.length - 1])
     good = false;
 
-    if (playerOrder.length == 20 && good) {
+    if (playorder.length == 9999 && good) {
         winGame();
         }
     
@@ -186,20 +187,21 @@ function check(){
             clearColor();
                 flash=0;
                 compTurn = true;
-                playerOrder = [];
+                playorder = [];
                 good = true;
                 intervalId = setInterval(gameTurn, 800);
         },800);
-        nois = false;
+        noise = false;
 
 
     }
 
-    if(turn == playerOrder.length && good &&!win){
+    if(turn == playorder.length && good &&!win){
         turn++;
-        playerOrder = [];
+        playorder = [];
         compTurn = true;
         flash = 0;
+        round.innerHTML = turn;
         intervalId = setInterval(gameTurn, 800);
     }
 
@@ -208,5 +210,6 @@ function check(){
 function winGame(){
 
     flashColor();
+    
 }
 
