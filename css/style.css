@@ -170,6 +170,14 @@ img#Regles{
 	margin-left: 50px;
 }
 
+img#Regles:active{
+
+	height: 50px;
+	margin-left: 50px;
+	margin-top: 3px;
+}
+
+
 .modal {
   display: none; 
   position: fixed; 

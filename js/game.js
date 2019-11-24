@@ -262,7 +262,7 @@ function check(){
     if(good == false){
         flashColor();
         setTimeout(() => {
-            clearColor();
+                clearColor();
                 flash=0;
                 compTurn = true;
                 playorder = [];
@@ -291,4 +291,3 @@ function winGame(){
     flashColor();
     
 }
-
