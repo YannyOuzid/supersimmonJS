@@ -5,6 +5,7 @@
 	<title>Devoir SuperSimon</title>
 </head>
 <body>
+
 	<audio id="audiodo" src="sound/do.wav" autoplay="false"></audio>
 	<audio id="audiore" src="sound/re.wav" autoplay="false"></audio>
 	<audio id="audiomi" src="sound/mi.wav" autoplay="false"></audio>
@@ -17,13 +18,18 @@
 	<div id="pinkbutton" onclick="audioRe();"></div>
 	<div id="bluebutton" onclick="audioMi();"></div>
 
+	
 	<div id="Stats">
 	<button id="start">Start</button>
 	<br>
 	<label for="nom">Round: </label>
 	<div id="round" value=""></div>
+	<br>
+	<label for="nom">Nombre de touches validé : </label>
+	<div id="click" value=""></div>
 	<button id="recommencer"  onclick="location.reload();">Recommencer</button>
 	</div>
+
 
 	<div id="greenbutton" onclick="audioFa();"></div>
 	<div id="brownbutton" onclick="audioSol();"></div>
@@ -33,23 +39,23 @@
 
 	<img id="Regles" src="img/regles.png">
 	<div id="Modalregles" class="modal">
-  	<div class="modal-content">
-    <span class="close">&times;</span>
-	<h3>Règles du SuperSimon :</h3>
-	<p>-Reproduire la suite de couleurs présenter par le jeu</p>
-	<p>-Une erreur = Game Over</p>
-  	</div>
+  		<div class="modal-content">
+    		<span class="close">&times;</span>
+			<h3>Règles du SuperSimon :</h3>
+			<p>-Reproduire la suite de couleurs présenter par le jeu</p>
+			<p>-Une erreur = Game Over</p>
+  		</div>
 	</div>
 
 
 	<div id="modalgameover" class="modal">
 		<div class="modal-content">
-	  <span class="close">&times;</span>
-	  <h3>Game Over</h3>
-	  <p>Vous avez réussi</p>
-	  <button id="recommencer" onclick="location.reload();">Recommencer</button>
+	  		<span class="close">&times;</span>
+	  		<h3>Game Over</h3>
+	  		<p>Vous avez réussi</p>
+	  		<button id="recommencer" onclick="location.reload();">Recommencer</button>
 		</div>
-	  </div>
+	</div>
   
 
 <script type="text/javascript" src="js/modalregle.js"></script>

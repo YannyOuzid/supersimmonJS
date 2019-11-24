@@ -7,8 +7,10 @@ let compTurn;
 let intervalId;
 let noise = true;
 let win;
+let nbrclicks;
 
 const round = document.querySelector("#round");
+const click = document.querySelector("#click");
 const redbutton = document.querySelector("#redbutton");
 const bluebutton = document.querySelector("#bluebutton");
 const greenbutton = document.querySelector("#greenbutton");
@@ -32,11 +34,13 @@ function play(){
     flash = 0;
     intervalId = 0;
     turn = 1;
+    nbrclicks = 0;
     good = true;
     round.innerHTML = 1;
+    click.innerHTML = 0;
     for (var i = 0; i <9999; i++){
 
-        order.push(Math.floor(Math.random() * 4) + 1);
+        order.push(Math.floor(Math.random() * 6) + 1);
     }
 
     compTurn = true;
@@ -62,6 +66,8 @@ function gameTurn() {
                 if (order[flash] == 2) two();
                 if (order[flash] == 3) three();
                 if (order[flash] == 4) four();
+                if (order[flash] == 5) five();
+                if (order[flash] == 6) six();
                 flash++;
 
             }, 200);
@@ -161,6 +167,8 @@ redbutton.addEventListener('click', (event) => {
         setTimeout(() => {
             clearColor();
             check();
+            nbrclicks ++;
+            click.innerHTML = nbrclicks;
         }, 300);
     }
 })
@@ -173,6 +181,8 @@ pinkbutton.addEventListener('click', (event) => {
         setTimeout(() => {
             clearColor();
             check();
+            nbrclicks ++;
+            click.innerHTML = nbrclicks;
         }, 300);
     }
 })
@@ -185,6 +195,8 @@ bluebutton.addEventListener('click', (event) => {
         setTimeout(() => {
             clearColor();
             check();
+            nbrclicks ++;
+            click.innerHTML = nbrclicks;
         }, 300);
     }
 })
@@ -197,6 +209,8 @@ greenbutton.addEventListener('click', (event) => {
         setTimeout(() => {
             clearColor();
             check();
+            nbrclicks ++;
+            click.innerHTML = nbrclicks;
         }, 300);
     }
 })
@@ -209,6 +223,8 @@ brownbutton.addEventListener('click', (event) => {
         setTimeout(() => {
             clearColor();
             check();
+            nbrclicks ++;
+            click.innerHTML = nbrclicks;
         }, 300);
     }
 })
@@ -221,6 +237,8 @@ yellowbutton.addEventListener('click', (event) => {
         setTimeout(() => {
             clearColor();
             check();
+            nbrclicks ++;
+            click.innerHTML = nbrclicks;
         }, 300);
     }
 })
@@ -243,7 +261,6 @@ function check(){
                 good = true;
                 intervalId = setInterval(gameTurn, 800);
                 modalgameover.style.display = "block";
-                stop;
         },800);
         noise = false;
 
