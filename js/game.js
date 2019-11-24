@@ -15,6 +15,8 @@ const greenbutton = document.querySelector("#greenbutton");
 const yellowbutton = document.querySelector("#yellowbutton");
 const start = document.querySelector("#start");
 
+var modalgameover = document.getElementById("modalgameover");
+
 start.addEventListener('click', (event) => {
     play();
 }
@@ -190,6 +192,8 @@ function check(){
                 playorder = [];
                 good = true;
                 intervalId = setInterval(gameTurn, 800);
+                modalgameover.style.display = "block";
+                stop;
         },800);
         noise = false;
 
