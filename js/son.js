@@ -25,3 +25,15 @@ function audioFa() {
 	sound.play();
 
 }
+function audioSol() {
+
+	var sound = document.getElementById("audiosol");
+	sound.play();
+
+}
+function audioLa() {
+
+	var sound = document.getElementById("audiola");
+	sound.play();
+
+}

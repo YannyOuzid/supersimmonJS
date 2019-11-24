@@ -13,6 +13,8 @@ const redbutton = document.querySelector("#redbutton");
 const bluebutton = document.querySelector("#bluebutton");
 const greenbutton = document.querySelector("#greenbutton");
 const yellowbutton = document.querySelector("#yellowbutton");
+const pinkbutton = document.querySelector("#pinkbutton");
+const brownbutton = document.querySelector("#brownbutton");
 const start = document.querySelector("#start");
 
 var modalgameover = document.getElementById("modalgameover");
@@ -84,7 +86,7 @@ function two() {
 
     }
     noise = true;
-    bluebutton.style.backgroundColor = "#6C8FFF";
+    pinkbutton.style.backgroundColor = "#F9BEFA";
 
 }
 function three() {
@@ -94,12 +96,32 @@ function three() {
 
     }
     noise = true;
-    greenbutton.style.backgroundColor = "#95FF6C";
+    bluebutton.style.backgroundColor = "#6C8FFF";
 
 }
 function four() {
     if (noise) {
         let audio = document.getElementById("audiofa");
+        audio.play();
+
+    }
+    noise = true;
+    greenbutton.style.backgroundColor = "#95FF6C";
+
+}
+function five() {
+    if (noise) {
+        let audio = document.getElementById("audiosol");
+        audio.play();
+
+    }
+    noise = true;
+    brownbutton.style.backgroundColor = "#F96969";
+
+}
+function six() {
+    if (noise) {
+        let audio = document.getElementById("audiola");
         audio.play();
 
     }
@@ -114,6 +136,8 @@ function clearColor() {
     bluebutton.style.backgroundColor = "blue";
     yellowbutton.style.backgroundColor = "yellow";
     greenbutton.style.backgroundColor = "green";
+    pinkbutton.style.backgroundColor = "pink";
+    brownbutton.style.backgroundColor = "brown";
 
 }
 
@@ -123,6 +147,8 @@ function flashColor() {
     bluebutton.style.backgroundColor = "#6C8FFF";
     yellowbutton.style.backgroundColor = "#95FF6C";
     greenbutton.style.backgroundColor = "#F4FF6C";
+    pinkbutton.style.backgroundColor = "#F9BEFA";
+    brownbutton.style.backgroundColor = "#F96969";
 
 }
 
@@ -138,7 +164,7 @@ redbutton.addEventListener('click', (event) => {
         }, 300);
     }
 })
-bluebutton.addEventListener('click', (event) => {
+pinkbutton.addEventListener('click', (event) => {
     if (on) {
         playorder.push(2);
         two();
@@ -150,7 +176,7 @@ bluebutton.addEventListener('click', (event) => {
         }, 300);
     }
 })
-greenbutton.addEventListener('click', (event) => {
+bluebutton.addEventListener('click', (event) => {
     if (on) {
         playorder.push(3);
         three();
@@ -162,10 +188,34 @@ greenbutton.addEventListener('click', (event) => {
         }, 300);
     }
 })
-yellowbutton.addEventListener('click', (event) => {
+greenbutton.addEventListener('click', (event) => {
     if (on) {
         playorder.push(4);
         four();
+    }
+    if(!win){
+        setTimeout(() => {
+            clearColor();
+            check();
+        }, 300);
+    }
+})
+brownbutton.addEventListener('click', (event) => {
+    if (on) {
+        playorder.push(5);
+        five();
+    }
+    if(!win){
+        setTimeout(() => {
+            clearColor();
+            check();
+        }, 300);
+    }
+})
+yellowbutton.addEventListener('click', (event) => {
+    if (on) {
+        playorder.push(6);
+        six();
     }
     if(!win){
         setTimeout(() => {
