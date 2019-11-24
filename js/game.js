@@ -135,7 +135,7 @@ function sixiemebouton() {
 
     }
     noise = true;
-    yellowbutton.style.backgroundColor = "#F4FF6C";
+    yellowbutton.style.backgroundColor = "#FCFBDC";
 
 }
 /* Fonction des couleurs des boutons*/
@@ -155,7 +155,7 @@ function flashColor() {
 
     redbutton.style.backgroundColor = "#FF6C6C";
     bluebutton.style.backgroundColor = "#6C8FFF";
-    yellowbutton.style.backgroundColor = "#95FF6C";
+    yellowbutton.style.backgroundColor = "##FCFBDC";
     greenbutton.style.backgroundColor = "#F4FF6C";
     pinkbutton.style.backgroundColor = "#F9BEFA";
     brownbutton.style.backgroundColor = "#F96969";
